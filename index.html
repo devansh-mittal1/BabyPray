@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BabyPray | Peace for your pregnancy journey</title>
+    <meta name="description" content="A serene, intimate prayer journal and companion for expecting mothers. Find peace, track your pregnancy, and build your faith.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dawnBlush: '#FDFBF7',
+                        emberRose: '#E87A5D',
+                        rootInk: '#2D2B2A',
+                        rootInkMuted: '#6B6865',
+                        surface: '#FFFFFF',
+                    },
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #FDFBF7;
+            color: #2D2B2A;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #FDFBF7 0%, #FFF5F2 50%, #FDFBF7 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .gradient-blob {
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(232,122,93,0.15) 0%, rgba(253,251,247,0) 70%);
+            border-radius: 50%;
+            z-index: 0;
+            top: -200px;
+            right: -200px;
+            animation: pulse 8s ease-in-out infinite alternate;
+        }
+        
+        .gradient-blob-2 {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(232,122,93,0.1) 0%, rgba(253,251,247,0) 70%);
+            border-radius: 50%;
+            z-index: 0;
+            bottom: 0px;
+            left: -150px;
+            animation: pulse 10s ease-in-out infinite alternate-reverse;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1) translate(0, 0); }
+            100% { transform: scale(1.1) translate(-20px, 20px); }
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.9);
+            box-shadow: 0 10px 40px -10px rgba(45, 43, 42, 0.08);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .glass-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 20px 40px -10px rgba(232, 122, 93, 0.15);
+            border: 1px solid rgba(232, 122, 93, 0.3);
+        }
+
+        .app-store-btn {
+            transition: all 0.3s ease;
+        }
+        
+        .app-store-btn:hover {
+            transform: scale(1.05);
+            opacity: 0.95;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="font-sans">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 transition-all duration-300" id="navbar">
+        <div class="glass-card mx-auto max-w-6xl mt-4 px-6 py-4 rounded-full flex justify-between items-center">
+            <div class="text-xl font-bold tracking-tight text-rootInk">
+                Baby<span class="text-emberRose">Pray</span>
+            </div>
+            <div class="hidden md:flex space-x-8 text-sm font-medium">
+                <a href="#features" class="text-rootInkMuted hover:text-emberRose transition-colors">Features</a>
+                <a href="#about" class="text-rootInkMuted hover:text-emberRose transition-colors">About</a>
+                <a href="mailto:studiovisionaryapps@gmail.com" class="text-rootInkMuted hover:text-emberRose transition-colors">Support</a>
+            </div>
+            <a href="#" class="bg-rootInk text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-emberRose transition-colors">
+                Get the App
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <main class="gradient-bg min-h-screen flex items-center justify-center relative px-4 pt-24 pb-16">
+        <div class="gradient-blob"></div>
+        <div class="gradient-blob-2"></div>
+        
+        <div class="max-w-4xl mx-auto text-center relative z-10 reveal active">
+            <span class="inline-block py-1 px-3 rounded-full bg-white text-emberRose text-sm font-semibold mb-6 border border-emberRose/20 shadow-sm">
+                Your spiritual companion for pregnancy
+            </span>
+            <h1 class="text-5xl md:text-7xl font-serif font-semibold text-rootInk leading-tight mb-6">
+                Find perfect peace in <br />
+                <span class="italic text-emberRose">your pregnancy journey.</span>
+            </h1>
+            <p class="text-lg md:text-xl text-rootInkMuted mb-10 max-w-2xl mx-auto font-light leading-relaxed">
+                A beautiful, intimate prayer journal designed exclusively for expecting mothers. Navigate your fears, track your baby's growth, and build your faith week by week.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#" class="app-store-btn inline-block">
+                    <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" class="h-14">
+                </a>
+            </div>
+            
+            <!-- Mockup Preview (Placeholder) -->
+            <div class="mt-20 mx-auto w-full max-w-3xl glass-card rounded-[40px] p-4 relative overflow-hidden hidden md:block" style="height: 400px;">
+                <div class="absolute inset-0 bg-gradient-to-b from-white/40 to-transparent z-10"></div>
+                <div class="w-full h-full bg-white rounded-[32px] overflow-hidden flex flex-col items-center justify-center border border-gray-100 shadow-inner">
+                    <div class="text-center p-8">
+                        <div class="w-16 h-16 bg-emberRose/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-emberRose" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                        </div>
+                        <h3 class="font-serif text-2xl mb-2 text-rootInk">Beautiful inside and out.</h3>
+                        <p class="text-rootInkMuted font-light">Experience the app on your iPhone.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Features Section -->
+    <section id="features" class="py-24 bg-white relative">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-3xl md:text-5xl font-serif font-semibold text-rootInk mb-4">Tailored to your heart.</h2>
+                <p class="text-rootInkMuted text-lg max-w-2xl mx-auto font-light">Built with deep care to address the specific anxieties, milestones, and moments of pregnancy.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="glass-card p-8 rounded-3xl reveal" style="transition-delay: 100ms;">
+                    <div class="w-12 h-12 bg-emberRose/10 rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6 text-emberRose" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-rootInk mb-3">Targeted Prayers</h3>
+                    <p class="text-rootInkMuted font-light leading-relaxed">
+                        Hundreds of prayers crafted specifically for pregnancy fears—from labor pain to past loss and baby's health.
+                    </p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="glass-card p-8 rounded-3xl reveal" style="transition-delay: 200ms;">
+                    <div class="w-12 h-12 bg-emberRose/10 rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6 text-emberRose" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-rootInk mb-3">Weekly Tracking</h3>
+                    <p class="text-rootInkMuted font-light leading-relaxed">
+                        Follow along with your pregnancy week-by-week, complete with a personalized scripture tailored to your exact milestone.
+                    </p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="glass-card p-8 rounded-3xl reveal" style="transition-delay: 300ms;">
+                    <div class="w-12 h-12 bg-emberRose/10 rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6 text-emberRose" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-rootInk mb-3">Daily Reminders</h3>
+                    <p class="text-rootInkMuted font-light leading-relaxed">
+                        Set custom notifications for morning, afternoon, or night. Receive fresh, encouraging scriptures right when you need them.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Private & Secure Section -->
+    <section class="py-24 bg-dawnBlush relative overflow-hidden">
+        <div class="max-w-6xl mx-auto px-6 text-center reveal">
+            <h2 class="text-3xl md:text-4xl font-serif font-semibold text-rootInk mb-6">Uncompromising Privacy.</h2>
+            <p class="text-lg text-rootInkMuted max-w-2xl mx-auto font-light leading-relaxed mb-10">
+                Your prayers are between you and God. We do not require accounts, and we do not store your intimate prayer history on our servers. Everything is saved safely and locally on your device.
+            </p>
+            <a href="privacy-policy.html" class="text-emberRose font-medium hover:underline inline-flex items-center">
+                Read our Privacy Policy
+                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-rootInk text-white py-12">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-6 md:mb-0 text-center md:text-left">
+                <div class="text-2xl font-bold tracking-tight mb-2">
+                    Baby<span class="text-emberRose">Pray</span>
+                </div>
+                <p class="text-gray-400 text-sm font-light">© 2026 Studio Visionary Apps. All rights reserved.</p>
+            </div>
+            
+            <div class="flex flex-wrap justify-center gap-6 text-sm font-light text-gray-300">
+                <a href="terms-and-conditions.html" class="hover:text-white transition-colors">Terms of Service</a>
+                <a href="privacy-policy.html" class="hover:text-white transition-colors">Privacy Policy</a>
+                <a href="mailto:studiovisionaryapps@gmail.com" class="hover:text-white transition-colors">Support</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Simple Scroll Reveal Script -->
+    <script>
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 100;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", reveal);
+        reveal(); // Trigger on load
+    </script>
+</body>
+</html>
